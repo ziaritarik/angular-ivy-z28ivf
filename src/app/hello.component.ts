@@ -19,8 +19,8 @@ import { Component, Input } from '@angular/core';
   <button  [disabled]='disabled'>Submit</button>
   <br><br>
 
-  <input [value]="getMessage()"/>
-
+  <input [value]="getMessage()"/><br><br>
+  <input [value]="getname()"/>
   `,
   styles: [`h1 { font-family: Lato; }`],
 })
@@ -29,6 +29,8 @@ export class HelloComponent {
   counter = 0;
   LongText = 'Lorem Ipsum';
   disabled = false;
+  lastname = 'tarik';
+  firstname = 'ziari';
   constructor() {
     /*
     setInterval(() => {
@@ -42,5 +44,8 @@ export class HelloComponent {
 
   getMessage() {
     return 'world';
+  }
+  getname() {
+    return this.firstname + '' + this.lastname;
   }
 }
