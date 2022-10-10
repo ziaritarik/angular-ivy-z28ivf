@@ -21,16 +21,20 @@ import { Component, Input } from '@angular/core';
 
   <input [value]="getMessage()"/><br><br>
   <input [value]="getname()"/>
+
+  <h1>Counter :  {{conteur}}!</h1>
+  <button (click)="increment()">Increment</button>
   `,
   styles: [`h1 { font-family: Lato; }`],
 })
 export class HelloComponent {
   message = 'world';
   counter = 0;
+  conteur = 0;
   LongText = 'Lorem Ipsum';
   disabled = false;
-  lastname = 'tarik';
-  firstname = 'ziari';
+  lastName = 'Tarik';
+  firstName = 'Ziari';
   constructor() {
     /*
     setInterval(() => {
@@ -46,6 +50,9 @@ export class HelloComponent {
     return 'world';
   }
   getname() {
-    return this.firstname + '' + this.lastname;
+    return this.firstName + '    ' + this.lastName;
+  }
+  increment() {
+    return this.conteur++;
   }
 }
