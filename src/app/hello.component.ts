@@ -24,9 +24,10 @@ import { Component, Input } from '@angular/core';
 
   <h1>Counter :  {{conteur}}!</h1>
   <button (click)="increment()">Increment</button>
-  
+
   <br><br>
   <input [(ngModel)]="name"/>
+  <input [(ngModel)]="name" (ngModelChange)="callserch($event)"/>
   {{name}}
   `,
   styles: [`h1 { font-family: Lato; }`],
@@ -59,5 +60,9 @@ export class HelloComponent {
   }
   increment() {
     this.conteur++;
+  }
+
+  callserch(term) {
+    console.log(term);
   }
 }
