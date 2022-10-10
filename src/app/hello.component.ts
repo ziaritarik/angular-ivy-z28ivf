@@ -24,6 +24,10 @@ import { Component, Input } from '@angular/core';
 
   <h1>Counter :  {{conteur}}!</h1>
   <button (click)="increment()">Increment</button>
+  
+  <br><br>
+  <input [(ngModel)]="name"/>
+  {{name}}
   `,
   styles: [`h1 { font-family: Lato; }`],
 })
@@ -35,6 +39,7 @@ export class HelloComponent {
   disabled = false;
   lastName = 'Tarik';
   firstName = 'Ziari';
+  name = 'TZ';
   constructor() {
     /*
     setInterval(() => {
@@ -53,6 +58,6 @@ export class HelloComponent {
     return this.firstName + '    ' + this.lastName;
   }
   increment() {
-    return this.conteur++;
+    this.conteur++;
   }
 }
