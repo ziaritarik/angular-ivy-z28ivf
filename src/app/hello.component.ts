@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
   //interpolation: ['##', '##'],
 })
 export class HelloComponent {
+  isErroe: boolean = false;
   message = 'world';
   counter = 0;
   conteur = 0;

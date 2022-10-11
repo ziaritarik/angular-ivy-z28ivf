@@ -30,4 +30,11 @@
  {{ user | json }} 
   FirstName: {{ user.fisrtname | lowercase }}
   LastName :{{ user.lastname | uppercase }} 
+  LastName :{{ user.lastname | uppercase | slice: 0:2 }} 
 </pre>
+<pre>
+DateSelonFormat :{{ date | date }} 
+DateSelonFormat :{{ date | date: 'yyyy-MM-dd' }} 
+</pre>
+<span *ngIf="!isErroe">This is in error</span>
+<span *ngIf="isErroe">This is in error</span>
