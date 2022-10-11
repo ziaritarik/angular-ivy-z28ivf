@@ -2,35 +2,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hello',
-  template: `<h1>{{getMessage()}} !!Hello {{message}} {{counter}}!</h1>
-  
-  <p> {{LongText}}</p>
-  <p [textContent]=LongText> </p>
-
-  <p textContent=LongText> </p>
-  <p textContent={{LongText}}> </p>
-
-  
-  <input [value]="message"/>
-  <input value={{message}}/>
-  <br><br>
-  <button  disabled='disabled'>Submit</button>
-  <br>
-  <button  [disabled]='disabled'>Submit</button>
-  <br><br>
-
-  <input [value]="getMessage()"/><br><br>
-  <input [value]="getname()"/>
-
-  <h1>Counter :  {{conteur}}!</h1>
-  <button (click)="increment()">Increment</button>
-
-  <br><br>
-  <input [(ngModel)]="name"/>
-  <input [(ngModel)]="name" (ngModelChange)="callserch($event)"/>
-  {{name}}
-  `,
-  styles: [`h1 { font-family: Lato; }`],
+  templateUrl: './hello.component.html',
+  styleUrls: ['./hello.component.css'],
+  //Interpolatiion permet de changer {{}} par ## ##
+  //interpolation: ['##', '##'],
 })
 export class HelloComponent {
   message = 'world';
@@ -41,6 +16,12 @@ export class HelloComponent {
   lastName = 'Tarik';
   firstName = 'Ziari';
   name = 'TZ';
+
+  user = {
+    fisrtname: 'Tarik',
+    lastname: 'Ziari',
+  };
+  date = new Date();
   constructor() {
     /*
     setInterval(() => {

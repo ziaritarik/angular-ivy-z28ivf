@@ -1,0 +1,33 @@
+<h1>{{ getMessage() }} !!Hello {{ message }} {{ counter }}!</h1>
+
+<p>{{ LongText }}</p>
+<p [textContent]="LongText"></p>
+
+<p textContent="LongText"></p>
+<p textContent="{{ LongText }}"></p>
+
+<input [value]="message" />
+<input value="{{ message }}" />
+
+<button disabled="disabled">Submit</button>
+
+<button [disabled]="disabled">Submit</button>
+<br />
+<input [value]="getMessage()" />
+<input [value]="getname()" />
+
+<h1>Counter : {{ conteur }}!</h1>
+<button (click)="increment()">Increment</button>
+<br />
+<input [(ngModel)]="name" />
+<input [(ngModel)]="name" (ngModelChange)="callserch($event)" />
+{{ name }}
+// #refInput variable locale
+<br />
+<input [(ngModel)]="name" #refInput />
+<button (click)="refInput.focus()">focus</button>
+<pre>
+ {{ user | json }} 
+  FirstName: {{ user.fisrtname | lowercase }}
+  LastName :{{ user.lastname | uppercase }} 
+</pre>
