@@ -5,9 +5,9 @@ import { Component, VERSION } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   //Interpolatiion permet de changer {{}} par ## ##
-  interpolation: ['##', '##'],
+  //interpolation: ['##', '##'],
 })
 export class AppComponent {
-  name = 'Angular IN DARIJA ';
-  age = 'age' + 32;
+  name = ' Angular IN DARIJA ';
+  age = 32;
 }
